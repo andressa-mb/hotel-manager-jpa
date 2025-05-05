@@ -56,7 +56,7 @@ public class QuartosDAO {
                     + "AND quarto.capacidadeAdultos >= :adultos "
                     + "AND quarto.capacidadeCriancas >= :criancas "
                     + "AND quarto.id NOT IN ("
-                    + "    SELECT reserva.quarto.id FROM Reserva reserva "
+                    + "    SELECT reserva.quartoId FROM Reserva reserva "
                     + "    WHERE reserva.dataCheckin <= :dataPrevCheckout "
                     + "    AND reserva.dataPrevCheckout >= :dataCheckin"
                     + ")";

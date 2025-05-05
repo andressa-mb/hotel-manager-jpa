@@ -1,5 +1,6 @@
 package br.com.senac.hotel.web.Models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +17,9 @@ public class Quartos {
     private boolean disponivel;
     private double valor_diaria;
     private String comodidades;
+    @Column(name = "capacidade_adultos")
     private int capacidadeAdultos;
+    @Column(name = "capacidade_criancas")
     private int capacidadeCriancas;
 
     public Quartos() {
